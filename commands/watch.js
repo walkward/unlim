@@ -24,6 +24,12 @@ exports.handler = function (argv) {
   Promise
     .all([ cleanup(), setup(), copy() ])
     .then(function() {
+      
+      // Check if there is a newer version of unlimited-tools
+      if (shell.exec('npm outdated unlimited-tools').code !== 0) {
+        shell.echo('Error: Git commit failed');
+        shell.exit(1);
+      }
 
       msg.header("Running Watch Tasks & Deploying Assets");
       shell.exec('webpack --config config/webpack.config.js --watch --color=always', {async:true});
