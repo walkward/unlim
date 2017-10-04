@@ -4,6 +4,7 @@ upload
 deploy.log
 config.yml
 node_modules
+npm-debug.log
 
 # Packages #
 ############
@@ -35,4 +36,3 @@ node_modules
 .Trashes
 ehthumbs.db
 Thumbs.db
-npm-debug.log
