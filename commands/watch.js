@@ -23,7 +23,7 @@ exports.desc = 'Watch for changes'
 exports.handler = function (argv) {
 
   Promise
-    .all([ cleanup(), setup(), copy(), refresh() ])
+    .all([ cleanup(), setup(), copy() ])
     .then(function() {
 
       // Check if there is a newer version of unlimited-tools
