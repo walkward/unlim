@@ -1,6 +1,6 @@
 {
   "name": "unlimited-tools",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Tools for creating and updating the unlimited theme.",
   "main": "index.js",
   "repository": {
@@ -8,7 +8,7 @@
     "url": "git+https://github.com/walkward/unlimited-tools.git"
   },
   "scripts": {
-    "version": "git push --tags && npm version patch"
+    "version:upgrade": "git push --tags && npm version patch"
   },
   "author": "",
   "license": "ISC",
