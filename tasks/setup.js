@@ -22,8 +22,8 @@ module.exports = function() {
       try {
 
         var result = (function(){
-          // Create a new .theme_update file for use by the browsersync
-          shell.exec('touch dist/.theme_update');
+          // Create a new theme.update file for use by the browsersync
+          shell.exec('touch dist/theme.update');
 
           // TODO: Add feature to check if more current version exists +enhancement id:2 gh:4
 

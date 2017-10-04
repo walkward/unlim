@@ -41,8 +41,13 @@ function note(msg) {
     log(chalk.dim('Note: ' + msg ));
 }
 
+function error(msg) {
+    log(chalk.red('Error: ' + msg ));
+}
+
 module.exports = {
     header: header,
     note: note,
-    message: message
+    message: message,
+    error: error
 };
