@@ -1,6 +1,6 @@
 {
   "name": "unlim",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "description": "Tools for creating and updating the unlimited theme.",
   "main": "index.js",
   "repository": {
