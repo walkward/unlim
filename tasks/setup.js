@@ -17,6 +17,13 @@ var Promise = require('bluebird');
 module.exports = function() {
   var slatePath = './src/assets';
 
+  // Check if there is a newer version of unlimited-tools
+  if (shell.exec('npm outdated unlim').code !== 0) {
+    msg.error("Please install newest version of unlimited-tools before proceeding");
+    msg.run("npm install unlim -D");
+    shell.exit(1);
+  }
+
   var replaceFiles = function(){
     return new Promise(function(resolve, reject) {
       try {

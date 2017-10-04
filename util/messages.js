@@ -46,8 +46,9 @@ function error(msg) {
 }
 
 function run(msg) {
-    log(chalk.white('Try Running: $ '));
-    log(chalk.cyan(msg ));
+    log('');
+    log(chalk.white('Try Running: $ '), chalk.cyan(msg));
+    log('');
 }
 
 module.exports = {
