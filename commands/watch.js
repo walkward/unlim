@@ -27,7 +27,7 @@ exports.handler = function (argv) {
     .then(function() {
 
       // Check if there is a newer version of unlimited-tools
-      if (shell.exec('npm outdated unlimited-tools').code !== 0) {
+      if (shell.exec('npm outdated unlim').code !== 0) {
         msg.error("Please install newest version of unlimited-tools before proceeding");
         msg.note("Try running: $ npm install unlimited-tools -D");
         shell.exit(1);
