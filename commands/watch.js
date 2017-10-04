@@ -34,7 +34,7 @@ exports.handler = function (argv) {
       }
 
       msg.header("Running Watch Tasks & Deploying Assets");
-      shell.exec('webpack --config config/webpack.config.js --watch --color=always', {async:true});
+      shell.exec('node_modules/.bin/webpack-dev-server --config config/webpack.config.js --watch --color=always', {async:true});
       shell.exec('cd dist; theme watch --notify=./theme.update', {async:true});
     });
 
