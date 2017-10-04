@@ -22,7 +22,7 @@ module.exports = function() {
   if (shell.exec('npm outdated unlim').code !== 0) {
     msg.error("Please install newest version of unlimited-tools before proceeding");
     msg.run("npm install unlim -D");
-    shell.exit(1);
+    shell.exit(0);
   }
 
   var replaceFiles = function(){
