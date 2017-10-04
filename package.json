@@ -1,19 +1,20 @@
 {
-  "name": "unlimited-tools",
+  "name": "unlim",
   "version": "1.0.11",
   "description": "Tools for creating and updating the unlimited theme.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/walkward/unlimited-tools.git"
+    "url": "git+https://github.com/walkward/unlim.git"
   },
   "scripts": {
+    "version:quick": "git add . ; git commit -m 'updates' ; git push && git push --tags && npm publish && npm version patch",
     "version:patch": "git push && git push --tags && npm publish && npm version patch"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/walkward/unlimited-tools/issues"
+    "url": "https://github.com/walkward/unlim/issues"
   },
   "dependencies": {
     "bluebird": "^3.5.0",
