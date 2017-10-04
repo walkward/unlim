@@ -45,9 +45,15 @@ function error(msg) {
     log(chalk.red('Error: ' + msg ));
 }
 
+function run(msg) {
+    log(chalk.white('Try Running: $ '));
+    log(chalk.cyan(msg ));
+}
+
 module.exports = {
     header: header,
     note: note,
     message: message,
-    error: error
+    error: error,
+    run: run
 };
