@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git+https://github.com/walkward/unlimited-tools.git"
   },
+  "scripts": {
+    "version": "git push --tags && npm version patch"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
