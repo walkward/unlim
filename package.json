@@ -8,7 +8,7 @@
     "url": "git+https://github.com/walkward/unlimited-tools.git"
   },
   "scripts": {
-    "version:patch": "git push && git push --tags && npm version patch"
+    "version:patch": "git push && git push --tags && npm publish && npm version patch"
   },
   "author": "",
   "license": "ISC",
@@ -16,37 +16,13 @@
     "url": "https://github.com/walkward/unlimited-tools/issues"
   },
   "dependencies": {
-    "autoprefixer": "6.1.2",
-    "babel-core": "^6.25.0",
-    "babel-loader": "^7.1.1",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-minify": "^0.2.0",
     "bluebird": "^3.5.0",
-    "browser-sync": "^2.18.13",
-    "browser-sync-webpack-plugin": "^1.2.0",
     "chalk": "^2.0.1",
     "chokidar": "^1.7.0",
-    "css-loader": "^0.28.4",
-    "expose-loader": "^0.7.3",
-    "extract-text-webpack-plugin": "^2.1.2",
-    "file-loader": "^0.11.2",
-    "lodash": "^4.17.4",
     "minimist": "^1.2.0",
     "node-sass": "^4.5.3",
-    "postcss-import": "^10.0.0",
-    "postcss-loader": "^2.0.6",
-    "postcss-safe-parser": "^3.0.1",
-    "sass-loader": "^6.0.6",
     "shelljs": "^0.7.8",
-    "source-map-loader": "^0.2.1",
-    "style-loader": "^0.18.2",
-    "sugarss": "^1.0.0",
-    "unlimited-tools": "^1.0.3",
-    "url-loader": "^0.5.9",
     "webpack": "^2.7.0",
-    "webpack-bundle-analyzer": "^2.8.2",
-    "yamljs": "^0.3.0",
     "yargs": "^8.0.2"
   },
   "private": false,
