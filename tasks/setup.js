@@ -12,6 +12,7 @@ var path = require('path');
 var shell = require('shelljs');
 var file = require('../util/file');
 var copy = require('./copy');
+var msg = require('../util/messages');
 var Promise = require('bluebird');
 
 module.exports = function() {
