@@ -1,11 +1,8 @@
 {
-  "name": "@walker/unlimited-tools",
+  "name": "unlimited-tools",
   "version": "1.0.2",
-  "description": "",
+  "description": "Tools for creating and updating the unlimited theme.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/walkward/unlimited-tools.git"
@@ -14,6 +11,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/walkward/unlimited-tools/issues"
-  },
-  "homepage": "https://github.com/walkward/unlimited-tools#readme"
+  }
 }
