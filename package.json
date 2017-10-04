@@ -1,6 +1,6 @@
 {
   "name": "unlimited-tools",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Tools for creating and updating the unlimited theme.",
   "main": "index.js",
   "repository": {
