@@ -3,6 +3,7 @@
 upload
 deploy.log
 config.yml
+node_modules
 npm-debug.log
 
 # Packages #
