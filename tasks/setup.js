@@ -43,12 +43,10 @@ module.exports = function(argv) {
             throw err
           }
 
-          if (argv.new !== true){
-            // Download config files which are updated using the shopify admin
-            shell.exec('cd dist ; theme download config/settings_data.json config/settings_schema.json ; cd -');
-            shell.cat('./dist/config/settings_data.json').to('./src/config/settings_data.json');
-            shell.cat('./dist/config/settings_schema.json').to('./src/config/settings_schema.json');
-          }
+          // Download config files which are updated using the shopify admin
+          shell.exec('cd dist ; theme download config/settings_data.json config/settings_schema.json ; cd -');
+          shell.cat('./dist/config/settings_data.json').to('./src/config/settings_data.json');
+          shell.cat('./dist/config/settings_schema.json').to('./src/config/settings_schema.json');
 
         })()
         return resolve(result);
