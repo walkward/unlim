@@ -15,7 +15,7 @@ var copy = require('./copy');
 var msg = require('../util/messages');
 var Promise = require('bluebird');
 
-module.exports = function() {
+module.exports = function(argv) {
   var slatePath = './src/assets';
 
   // Check if there is a newer version of unlimited-tools
@@ -41,6 +41,13 @@ module.exports = function() {
           } else {
             var err = new Error("Please add or update the shopify config file")
             throw err
+          }
+
+          if (argv.new !== true){
+            // Download config files which are updated using the shopify admin
+            shell.exec('cd dist ; theme download config/settings_data.json config/settings_schema.json ; cd -');
+            shell.cat('./dist/config/settings_data.json').to('./src/config/settings_data.json');
+            shell.cat('./dist/config/settings_schema.json').to('./src/config/settings_schema.json');
           }
 
         })()

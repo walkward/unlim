@@ -14,7 +14,6 @@ var msg = require('../util/messages');
 var cleanup = require('../tasks/cleanup');
 var setup = require('../tasks/setup');
 var copy = require('../tasks/copy');
-var replace = require('../tasks/replace');
 
 /* Export command and provide explanation */
 exports.command = 'watch'
@@ -23,7 +22,7 @@ exports.desc = 'Watch for changes'
 exports.handler = function (argv) {
 
   Promise
-    .all([ cleanup(), setup(), copy(), replace() ])
+    .all([ cleanup(), setup(), copy() ])
     .then(function() {
       msg.header("Running Watch Tasks & Deploying Assets");
       shell.exec('webpack --config config/webpack.config.js --watch --color=always', {async:true});

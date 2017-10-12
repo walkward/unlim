@@ -22,7 +22,7 @@ exports.desc = 'Build fresh new theme'
 exports.handler = function (argv) {
 
   Promise
-    .all([ cleanup(), setup() ])
+    .all([ cleanup(), setup(argv) ])
     .then(function() {
       msg.header("Running Webpack Build");
       shell.exec("NODE_ENV='production' webpack --config config/webpack.config.js --color=always");
