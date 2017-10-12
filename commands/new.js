@@ -21,7 +21,7 @@ exports.desc = 'Install Unlimited theme in a new store'
 exports.handler = function (argv) {
 
   Promise
-    .all([ cleanup(), setup(), copy() ])
+    .all([ cleanup(), setup(argv), copy() ])
     .then(function() {
       msg.header("Deploying files and performing setup tasks to get Unlimited Theme up and running");
       msg.note("This will overwrite the current theme contained within your config file.");
@@ -29,7 +29,7 @@ exports.handler = function (argv) {
       // TODO: Theme config files should not be downloaded when initially installing a theme
 
       msg.header("Running Webpack Build");
-      shell.exec('webpack --config config/webpack.config.js --env=dev --color=always');
+      shell.exec('./node_modules/.bin/webpack --config config/webpack.config.js --env=dev --color=always');
 
       msg.header("Deploying To Development Theme");
       msg.note("This will overwrite the current theme.");

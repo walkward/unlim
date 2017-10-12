@@ -21,10 +21,10 @@ exports.desc = 'Build fresh new theme'
 exports.handler = function (argv) {
 
   Promise
-    .all([ cleanup(), setup(argv) ])
+    .all([ cleanup(), setup() ])
     .then(function() {
       msg.header("Running Webpack Build");
-      shell.exec("NODE_ENV='production' webpack --config config/webpack.config.js --color=always");
+      shell.exec("NODE_ENV='production' ./node_modules/.bin/webpack --config config/webpack.config.js --color=always");
       msg.message("Build Completed Successfully")
     }).then(function() {
       copy();
