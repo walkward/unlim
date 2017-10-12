@@ -13,22 +13,26 @@ var msg = require('../util/messages');
 
 module.exports = function (){
 
-  return new Promise(function(resolve, reject) {
-    try {
+  var replaceFiles = function(){
+    return new Promise(function(resolve, reject) {
+      try {
 
-      var result = (function(){
-        msg.message('At least this is working');
-        // Download config files which are updated using the shopify admin
-        shell.exec('cd dist ; theme download config/settings_data.json config/settings_schema.json ; cd -');
-        shell.cat('./dist/config/settings_data.json').to('./src/config/settings_data.json');
-        shell.cat('./dist/config/settings_schema.json').to('./src/config/settings_schema.json');
-      })()
-      return resolve(result);
+        var result = (function(){
+          msg.message('At least this is working');
+          // Download config files which are updated using the shopify admin
+          shell.exec('cd dist ; theme download config/settings_data.json config/settings_schema.json ; cd -');
+          shell.cat('./dist/config/settings_data.json').to('./src/config/settings_data.json');
+          shell.cat('./dist/config/settings_schema.json').to('./src/config/settings_schema.json');
+        })()
+        return resolve(result);
 
-    } catch (err) {
-      return reject(err);
-    }
-  })
+      } catch (err) {
+        return reject(err);
+      }
+    })
+  }
+
+  return replaceFiles();
 
   // Replace sourceMappingURL with liquid version for accurate referencing
   // shell.sed('-i', 'sourceMappingURL=theme.js.map', 'sourceMappingURL={{ "theme.js.map" | asset_url }}', './dist/assets/theme.min.js.liquid');
