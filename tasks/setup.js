@@ -20,7 +20,8 @@ module.exports = function() {
 
   // Check if there is a newer version of unlimited-tools
   if (shell.exec('npm outdated unlim').code !== 0) {
-    msg.error("Please install newest version of unlimited-tools before proceeding");
+    msg.message("");
+    msg.error("Please install the newest version of unlimited-tools before proceeding.");
     msg.run("npm install unlim -D");
     shell.exit(0);
   }
@@ -33,8 +34,6 @@ module.exports = function() {
           // Create a new theme.update file for use by the browsersync
           shell.exec('touch dist/theme.update');
 
-          // TODO: Add feature to check if more current version exists +enhancement id:2 gh:4
-
           // Check if config file exists
           if (fs.existsSync('./config/config.yml')) {
             // Add config file to the new dist
@@ -43,11 +42,6 @@ module.exports = function() {
             var err = new Error("Please add or update the shopify config file")
             throw err
           }
-
-          // Download config files which are updated using the shopify admin
-          shell.exec('cd dist ; theme download config/settings_data.json config/settings_schema.json ; cd -');
-          shell.cat('./dist/config/settings_data.json').to('./src/config/settings_data.json');
-          shell.cat('./dist/config/settings_schema.json').to('./src/config/settings_schema.json');
 
         })()
         return resolve(result);

@@ -1,6 +1,6 @@
-#Unlimited Tools
+# Unlim
 
-Tools for creating and updating the unlimited theme.
+Tools for creating and updating the Unlimited Theme.
 
 ---------
 

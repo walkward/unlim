@@ -42,12 +42,12 @@ function note(msg) {
 }
 
 function error(msg) {
-    log(chalk.red('Error: ' + msg ));
+    log(chalk.red('Error! ' + msg ));
 }
 
 function run(msg) {
     log('');
-    log(chalk.white('Try Running: $ '), chalk.cyan(msg));
+    log(chalk.white('Try Running: $'), chalk.cyan(msg));
     log('');
 }
 
