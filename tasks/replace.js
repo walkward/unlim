@@ -10,7 +10,7 @@
 var shell = require('shelljs');
 var Promise = require('bluebird');
 
-module.exports = function () {
+export default function(){
 
   return new Promise(function(resolve, reject) {
     try {

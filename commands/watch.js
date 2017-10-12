@@ -14,7 +14,7 @@ var msg = require('../util/messages');
 var cleanup = require('../tasks/cleanup');
 var setup = require('../tasks/setup');
 var copy = require('../tasks/copy');
-var replace = require('../tasks/copy');
+var replace = require('../tasks/replace');
 
 /* Export command and provide explanation */
 exports.command = 'watch'
