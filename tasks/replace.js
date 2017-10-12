@@ -9,6 +9,7 @@
 
 var shell = require('shelljs');
 var Promise = require('bluebird');
+var msg = require('../util/messages');
 
 module.exports = function (){
 
@@ -16,6 +17,7 @@ module.exports = function (){
     try {
 
       var result = (function(){
+        msg.message('At least this is working');
         // Download config files which are updated using the shopify admin
         shell.exec('cd dist ; theme download config/settings_data.json config/settings_schema.json ; cd -');
         shell.cat('./dist/config/settings_data.json').to('./src/config/settings_data.json');
