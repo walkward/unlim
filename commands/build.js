@@ -24,7 +24,7 @@ exports.handler = function (argv) {
     .all([ cleanup(), setup() ])
     .then(function() {
       msg.header("Running Webpack Build");
-      shell.exec("NODE_ENV='production' ./node_modules/.bin/webpack --config config/webpack.config.js --color=always");
+      shell.exec("NODE_ENV='production' ./node_modules/.bin/webpack --color=always");
       msg.message("Build Completed Successfully")
     }).then(function() {
       copy();

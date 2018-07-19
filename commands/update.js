@@ -25,7 +25,7 @@ exports.handler = function (argv) {
     msg.header("Downloading config files within config folder from master branch");
     shell.exec('git fetch');
     shell.exec('git checkout origin/master -- ./config/.sass.lint.yml');
-    shell.exec('git checkout origin/master -- ./config/webpack.config.js');
+    shell.exec('git checkout origin/master -- ./webpack.config.js');
   }
 
 }

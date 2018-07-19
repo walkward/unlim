@@ -29,7 +29,7 @@ exports.handler = function (argv) {
       // TODO: Theme config files should not be downloaded when initially installing a theme
 
       msg.header("Running Webpack Build");
-      shell.exec('./node_modules/.bin/webpack --config config/webpack.config.js --env=dev --color=always');
+      shell.exec('./node_modules/.bin/webpack --env=dev --color=always');
 
       msg.header("Deploying To Development Theme");
       msg.note("This will overwrite the current theme.");
